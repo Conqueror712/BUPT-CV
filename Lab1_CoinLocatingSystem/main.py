@@ -1,150 +1,158 @@
-import numpy as np
+import os
 import cv2
+import numpy as np
+from PIL import Image
 
-# 自行编写的Canny边缘检测模块
-def canny_edge_detection(image, sigma=1, low_threshold=50, high_threshold=150):
-    # 使用高斯滤波平滑图像
-    blurred_image = gaussian_blur(image, sigma)
+# 高斯滤波器
+def gaussianKernel(k, sigma):
+    kernel_h = np.zeros((2 * k + 1, 2 * k + 1))
+    for i in range(0, 2 * k + 1):
+        for j in range(0, 2 * k + 1):
+            X, Y = i - k, j - k
+            kernel_h[i][j] = np.exp(- (X ** 2 + Y ** 2) / (2 * sigma ** 2))
+    kernel_h /= np.sum(kernel_h)
+    return kernel_h
 
-    # 计算图像梯度
-    gradient_magnitude, gradient_direction = calculate_gradient(blurred_image)
 
-    # 非极大值抑制
-    nms_image = non_max_suppression(gradient_magnitude, gradient_direction)
+# 二维卷积
+def conv2D(img, kernel, pad=(0, 0), stride=1):
+    H, W = img.shape
+    kernel_h, kernel_w = kernel.shape
+    out_h = (H + 2 * pad[0] - kernel_h) // stride + 1
+    out_w = (W + 2 * pad[1] - kernel_w) // stride + 1
+    new_img = np.pad(img, [[pad[0], pad[0]], [pad[1], pad[1]]], 'constant', constant_values=(0, 0))
+    col = np.zeros((kernel_h, kernel_w, out_h, out_w))
 
-    # 双阈值处理
-    thresholded_image = double_threshold(nms_image, low_threshold, high_threshold)
+    for y in range(kernel_h):
+        for x in range(kernel_w):
+            col[y, x, :, :] = new_img[y:(y + stride * out_h):stride, x:(x + stride * out_w):stride]
 
-    # 边缘跟踪
-    edge_image = edge_tracking(thresholded_image)
+    new_img = col.transpose((2, 3, 0, 1)).reshape(out_h * out_w, -1)
+    kernel = kernel.reshape((1, -1)).T
+    return np.dot(new_img, kernel).T.reshape((out_h, out_w))
 
-    return edge_image
 
-def gaussian_blur(image, sigma):
-    # 使用高斯核进行图像滤波
-    blurred_image = cv2.GaussianBlur(image, (5, 5), sigma)
-    return blurred_image
+# 非极大值抑制
+def NMS(Gx, Gy):
+    G = np.sqrt(Gx ** 2 + Gy ** 2)
+    Gx[np.abs(Gx) <= 1e-5] = 1e-5
+    temp = np.arctan(Gy, Gx) / np.pi * 180.
+    temp[temp < -22.5] += 180.
+    angle = np.zeros_like(temp, dtype=np.uint8)
+    angle[np.where(temp <= 22.5)] = 0
+    angle[np.where((temp > 22.5) & (temp <= 67.5))] = 45
+    angle[np.where((temp > 67.5) & (temp <= 112.5))] = 90
+    angle[np.where((temp > 112.5) & (temp <= 157.5))] = 135
 
-def calculate_gradient(image):
-    # 使用Sobel算子计算图像梯度
-    gradient_x = cv2.Sobel(image, cv2.CV_64F, 1, 0, ksize=3)
-    gradient_y = cv2.Sobel(image, cv2.CV_64F, 0, 1, ksize=3)
-    gradient_magnitude = np.sqrt(gradient_x**2 + gradient_y**2)
-    gradient_direction = np.arctan2(gradient_y, gradient_x)
-    return gradient_magnitude, gradient_direction
+    H, W = angle.shape
+    di0, dj0, di1, dj1 = 0, 0, 0, 0
+    for i in range(H):
+        for j in range(W):
+            if angle[i, j] == 0:
+                di0, di1, dj0, dj1 = -1, 0, 1, 0
+            elif angle[i, j] == 45:
+                di0, di1, dj0, dj1 = -1, 1, 1, -1
+            elif angle[i, j] == 90:
+                di0, di1, dj0, dj1 = 0, -1, 0, 1
+            elif angle[i, j] == 135:
+                di0, di1, dj0, dj1 = -1, -1, 1, 1
 
-def non_max_suppression(gradient_magnitude, gradient_direction):
-    # 非极大值抑制
-    rows, cols = gradient_magnitude.shape
-    nms_image = np.zeros((rows, cols), dtype=np.uint8)
-    angle = gradient_direction * (180.0 / np.pi)
-    angle[angle < 0] += 180
+            if j == 0:
+                di0 = max(di0, 0)
+                dj0 = max(dj0, 0)
+            if j == W - 1:
+                di0 = min(di0, 0)
+                dj0 = min(dj0, 0)
+            if i == 0:
+                di1 = max(di1, 0)
+                dj1 = max(dj1, 0)
+            if i == H - 1:
+                di1 = min(di1, 0)
+                dj1 = min(dj1, 0)
 
-    for i in range(1, rows - 1):
-        for j in range(1, cols - 1):
-            q = 255
-            r = 255
+            if max(max(G[i, j], G[i + di1, j + di0]), G[i + dj1, j + dj0]) != G[i, j]:
+                G[i, j] = 0
+    return G
 
-            # 根据梯度方向决定相邻像素
-            if (0 <= angle[i, j] < 22.5) or (157.5 <= angle[i, j] <= 180):
-                q = gradient_magnitude[i, j+1]
-                r = gradient_magnitude[i, j-1]
-            elif (22.5 <= angle[i, j] < 67.5):
-                q = gradient_magnitude[i+1, j-1]
-                r = gradient_magnitude[i-1, j+1]
-            elif (67.5 <= angle[i, j] < 112.5):
-                q = gradient_magnitude[i+1, j]
-                r = gradient_magnitude[i-1, j]
-            elif (112.5 <= angle[i, j] < 157.5):
-                q = gradient_magnitude[i-1, j-1]
-                r = gradient_magnitude[i+1, j+1]
+# 直方图阈值
+def histBasedThreshold(img):
+    img = np.uint8(img)
+    hist = cv2.calcHist([img], [0], None, [256], [0, 256])
+    peaks = np.where((hist[:-2] > hist[1:-1]) & (hist[1:-1] < hist[2:]))[0] + 1
+    if len(peaks) >= 2:
+        threshold = (peaks[0] + peaks[1]) // 2
+    else:
+        threshold = np.argmax(hist)
+    _, thresh_img = cv2.threshold(img, threshold, 255, cv2.THRESH_BINARY)
+    return thresh_img
 
-            # 如果当前像素是局部最大值，保留，否则置为0
-            if (gradient_magnitude[i, j] >= q) and (gradient_magnitude[i, j] >= r):
-                nms_image[i, j] = gradient_magnitude[i, j]
-            else:
-                nms_image[i, j] = 0
 
-    return nms_image
-
-def double_threshold(image, low_threshold, high_threshold):
-    # 双阈值处理
-    high_threshold = image.max() * high_threshold
-    low_threshold = high_threshold * low_threshold
-
-    rows, cols = image.shape
-    result_image = np.zeros((rows, cols), dtype=np.uint8)
-
-    weak = np.uint8(50)
-    strong = np.uint8(255)
-
-    strong_i, strong_j = np.where(image >= high_threshold)
-    zeros_i, zeros_j = np.where(image < low_threshold)
-
-    weak_i, weak_j = np.where((image <= high_threshold) & (image >= low_threshold))
-
-    result_image[strong_i, strong_j] = strong
-    result_image[weak_i, weak_j] = weak
-
-    return result_image
-
-def edge_tracking(image):
-    # 边缘跟踪
-    rows, cols = image.shape
-    result_image = np.zeros((rows, cols), dtype=np.uint8)
-
-    weak = 50
-    strong = 255
-
-    for i in range(1, rows - 1):
-        for j in range(1, cols - 1):
-            if image[i, j] == weak:
-                if (image[i+1, j-1] == strong) or (image[i+1, j] == strong) or (image[i+1, j+1] == strong) \
-                    or (image[i, j-1] == strong) or (image[i, j+1] == strong) or (image[i-1, j-1] == strong) \
-                    or (image[i-1, j] == strong) or (image[i-1, j+1] == strong):
-                    result_image[i, j] = strong
+# 双阈值检测
+def doubleThresholdDetection(src, HT, LT):
+    H, W = src.shape
+    src[src >= HT] = 255
+    src[src < LT] = 0
+    src = np.pad(src,[[1, 1], [1, 1]], 'constant', constant_values=(0, 0))
+    n8 = np.array(((1., 1., 1.), (1., 0., 1.), (1., 1., 1.)), dtype=np.float32)
+    for i in range(1, H + 2):
+        for j in range(1, W + 2):
+            if LT <= src[i,j] <= HT:
+                if np.max(src[i-1:i+2, j-1:j+2] * n8) >= HT:
+                    src[i, j] = 255
                 else:
-                    result_image[i, j] = 0
-            elif image[i, j] == strong:
-                result_image[i, j] = strong
+                    src[i, j] = 0
 
-    return result_image
+    return src[1:H+1, 1:W+1]
 
-# 自行编写的Hough圆检测模块
-def hough_circle_detection(image, min_radius, max_radius):
-    # 获取图像尺寸
-    height, width = image.shape
 
-    # 计算圆的最小距离
-    min_dist = max(min(height, width) // 2, 20)  # 将minDist设置为图像长宽的一半或20（取大者）
+# Sobel算子
+def soberGrad(img):
+    sober_x = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
+    sober_y = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
+    result_x = conv2D(img, sober_x)
+    result_y = conv2D(img, sober_y)
+    return result_x, result_y
 
-    # 使用霍夫圆变换检测图像中的圆形
-    circles = cv2.HoughCircles(image, cv2.HOUGH_GRADIENT, dp=1, minDist=min_dist,
-                               param1=50, param2=30, minRadius=min_radius, maxRadius=max_radius)
-    if circles is not None:
-        circles = np.uint16(np.around(circles))
-        return circles[0, :]  # 返回圆的参数（圆心坐标和半径）
-    else:
-        return None  # 如果未检测到圆，返回None
 
-# 主函数
 def main():
-    # 读取输入图像
-    input_image = cv2.imread('./images/test_02.jpg', cv2.IMREAD_GRAYSCALE)
+    # 参数设置
+    i = [1, 2, 3]
+    k = 1 # 高斯滤波器的大小
+    sigma = 1.4 # 高斯滤波器的标准差
 
-    # 边缘检测
-    edge_image = canny_edge_detection(input_image)
+    # Hough算法的参数
+    param1 = 100
+    param2 = 40
+    minRadius = 50
+    maxRadius = 200
 
-    # 圆形检测
-    circles = hough_circle_detection(edge_image, min_radius=10, max_radius=50)
+    # Canny算法，检测硬币的边缘
+    for it in i:
+        print(f">>>>>> 开始处理第", it, "张图片 >>>>>>")
+        img_path = f"./input/input_{it}.jpg"
+        image = Image.open(img_path)
+        raw = np.copy(image)
+        img = raw.mean(axis=2)
 
-    if circles is not None:  # 检查是否检测到圆
-        # 打印圆心坐标和半径
-        for circle in circles:
-            print("Circle center:", (circle[0], circle[1]))
-            print("Radius:", circle[2])
-    else:
-        print("No circles detected.")
+        kernel = gaussianKernel(k, sigma)
+        img = conv2D(img, kernel, pad=(1, 1))
+        Gx, Gy = soberGrad(img)
+        G = NMS(Gx, Gy)
+        G = doubleThresholdDetection(src=G, HT=100, LT=10)
 
-if __name__ == "__main__":
-    main()
+        # Hough算法，寻找硬币的圆心坐标和半径
+        hough = cv2.HoughCircles(np.uint8(G), cv2.HOUGH_GRADIENT, 1, 400, param1, param2, minRadius, maxRadius)
+        print(f"共检测到{len(hough[0])}个硬币")
+        cnt = 1
+        for circle in hough[0]:
+            x, y, r = circle
+            cv2.circle(raw, (int(x), int(y)), int(r), (0, 0, 255), 3)
+            cv2.circle(raw, (int(x), int(y)), 5, (0, 255, 0), -1)
+            print(f"第{cnt}枚硬币：", "圆心 = ", (int(x), int(y)), "\t, 半径 = ", int(r))
+
+        output_folder = f"./output/doubleThresholdDetection/{k}-{sigma}__100-10__{param1}-{param2}-{minRadius}-{maxRadius}/"
+        if not os.path.exists(output_folder):
+            os.makedirs(output_folder)
+
+        cv2.imwrite(f"{output_folder}output_{it}.jpg", raw)
+        print("")
