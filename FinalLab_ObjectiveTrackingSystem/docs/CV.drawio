@@ -1,0 +1,158 @@
+<mxfile host="app.diagrams.net" modified="2024-05-21T00:41:10.504Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="ymDFPQOwW99t7ehOR0iI" version="24.4.4" type="device">
+  <diagram name="第 1 页" id="dqPX0T_TrWLrsLO5j0py">
+    <mxGraphModel dx="1252" dy="463" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1;fontSize=12;" parent="1" source="U5L0Wk_K1hIGAWX2GgVE-1" target="U5L0Wk_K1hIGAWX2GgVE-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-1" value="用户界面交互&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="50.5" y="77" width="152" height="233" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-3" value="本地OpenCV窗口&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="66.5" y="163" width="120" height="129" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-4" value="选择ROI" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="80.5" y="214" width="91" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-7" value="Class KCFTracker" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="50" y="351" width="152" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontStyle=1;fontSize=12;" parent="1" source="U5L0Wk_K1hIGAWX2GgVE-8" target="U5L0Wk_K1hIGAWX2GgVE-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-8" value="Flask Web Server&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="257.5" y="199" width="152" height="203" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-9" value="route: /" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="273.5" y="238" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-10" value="route: /video_feed" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="273.5" y="292" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-11" value="gen_frames()" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="273.5" y="344" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-12" value="&lt;div style=&quot;font-size: 12px;&quot;&gt;Browser Client&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="257.5" y="77" width="152" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-13" value="HTML页面" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="273.5" y="116" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="U5L0Wk_K1hIGAWX2GgVE-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.001;entryY=0.875;entryDx=0;entryDy=0;entryPerimeter=0;fontStyle=1;fontSize=12;" parent="1" source="U5L0Wk_K1hIGAWX2GgVE-7" target="U5L0Wk_K1hIGAWX2GgVE-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-31" value="用户界面交互&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="437.5" y="346" width="152" height="194" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-32" value="本地OpenCV窗口&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="453.5" y="393" width="120" height="129" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-33" value="选择ROI" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="467.5" y="444" width="91" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontStyle=1;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-35" target="Tiu7GDsR_JWNdAXCSNpz-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-35" value="Flask Web Server&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="437" y="684" width="152" height="203" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-36" value="route: /" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="453" y="723" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-37" value="route: /video_feed" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="453" y="777" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-38" value="gen_frames()" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="453" y="829" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-39" value="&lt;div style=&quot;font-size: 12px;&quot;&gt;Browser Client&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="437" y="562" width="152" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-40" value="HTML页面" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="453" y="601" width="120" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=1;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-42" target="Tiu7GDsR_JWNdAXCSNpz-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-42" value="初始化跟踪器" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;fontStyle=1;gradientColor=#ffa500;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="629" y="447" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=1;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-44" target="Tiu7GDsR_JWNdAXCSNpz-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-44" value="提取ROI中的特征" style="whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;rounded=1;fontStyle=1;gradientColor=#ffa500;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="775" y="447" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-46" value="创建高斯响应矩阵" style="whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;rounded=1;fontStyle=1;gradientColor=#ffa500;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="921" y="447" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontStyle=1;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-49" target="Tiu7GDsR_JWNdAXCSNpz-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-49" value="&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 视频帧处理&lt;div style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;spacingLeft=-200;spacingBottom=350;fontStyle=1;gradientColor=#97d077;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="623" y="546" width="475" height="373" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=1;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-51" target="Tiu7GDsR_JWNdAXCSNpz-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-51" value="计算新帧与上一帧的特征之间的&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#ff0000&quot;&gt;核相关&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;fontStyle=1;gradientColor=#ffa500;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="921" y="696" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-53" target="Tiu7GDsR_JWNdAXCSNpz-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-53" value="通过逆傅立叶变换计算得到&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#ff0000&quot;&gt;核相关响应图&lt;/font&gt;，响应值最大的位置代表目标最可能出现的位置" style="whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;rounded=1;fontStyle=1;gradientColor=#ffa500;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="903" y="785" width="157" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-55" target="Tiu7GDsR_JWNdAXCSNpz-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-55" value="根据核相关响应&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#ff0000&quot;&gt;更新ROI位置&lt;/font&gt;，并使用新帧的特征和计算得到的&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#ff0000&quot;&gt;新核相关滤波器系数&lt;/font&gt;更新跟踪器内部状态" style="whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;rounded=1;fontStyle=1;gradientColor=#ffa500;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="676" y="781.5" width="150" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-56" target="Tiu7GDsR_JWNdAXCSNpz-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-56" value="根据更新后的ROI在视频的当前帧中&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#ff0000&quot;&gt;绘制矩形框&lt;/font&gt;以标识跟踪的目标" style="whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;rounded=1;fontStyle=1;gradientColor=#ffa500;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="676" y="582" width="151" height="86.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=1;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-58" target="Tiu7GDsR_JWNdAXCSNpz-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-58" value="对当前帧的ROI进行&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#ff0000&quot;&gt;尺寸调整&lt;/font&gt;并&lt;font style=&quot;font-size: 12px;&quot; color=&quot;#ff0000&quot;&gt;提取HOG特征&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;fontStyle=1;gradientColor=#ffa500;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="905.25" y="588" width="151.5" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-59" target="Tiu7GDsR_JWNdAXCSNpz-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-61" value="第一帧图像" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1;fontSize=12;" vertex="1" connectable="0" parent="Tiu7GDsR_JWNdAXCSNpz-60">
+          <mxGeometry x="-0.2032" y="-1" relative="1" as="geometry">
+            <mxPoint x="34" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-59" value="待处理视频" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="629" y="344" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontStyle=1;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-33" target="Tiu7GDsR_JWNdAXCSNpz-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-62" value="ROI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1;fontSize=12;" vertex="1" connectable="0" parent="Tiu7GDsR_JWNdAXCSNpz-30">
+          <mxGeometry x="-0.1241" relative="1" as="geometry">
+            <mxPoint x="19" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-63" target="Tiu7GDsR_JWNdAXCSNpz-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-63" value="HOG特征描述符" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="775" y="344" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Tiu7GDsR_JWNdAXCSNpz-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1;fontSize=12;" edge="1" parent="1" source="Tiu7GDsR_JWNdAXCSNpz-46" target="Tiu7GDsR_JWNdAXCSNpz-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

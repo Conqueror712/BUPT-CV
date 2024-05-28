@@ -334,7 +334,8 @@ class KCFTracker:
 
 # 应用示例
 def main():
-    cap = cv2.VideoCapture("../data/car.avi")
+    # cap = cv2.VideoCapture("../data/car.avi")
+    cap = cv2.VideoCapture("car.mp4")
     _, frame = cap.read()
     # roi = cv2.selectROI(frame)
     roi = cv2.selectROI("tracking", frame, False, False)
