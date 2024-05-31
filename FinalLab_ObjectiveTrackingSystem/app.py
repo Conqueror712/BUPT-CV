@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 from numpy.fft import fft2, ifft2, fftshift
 from flask import Flask, render_template, Response
+import time
 
 app = Flask(__name__)
 
@@ -130,12 +131,21 @@ def gen_frames():
     ret, frame = cap.read()
     roi = cv2.selectROI("tracking", frame, False, False)
     tracker.init_param(frame, roi)
+    
+    prev_time = time.time()
     while True:
         ret, frame = cap.read()
         if not ret:
             break
         x, y, w, h = tracker.update_frame(frame)
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        
+        current_time = time.time()
+        fps = 1.0 / (current_time - prev_time)
+        prev_time = current_time
+        
+        cv2.putText(frame, f'FPS: {fps:.2f}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
+        
         ret, buffer = cv2.imencode('.jpg', frame)
         frame = buffer.tobytes()
         yield (b'--frame\r\n'
